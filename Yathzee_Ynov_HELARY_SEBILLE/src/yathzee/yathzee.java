@@ -46,6 +46,11 @@ public class yathzee {
 			return 25; //Full House
 		}
 		
+		if ((nbDes[0] == 1 && nbDes[1] == 1 && nbDes[2] == 1 && nbDes[3] == 1 && nbDes[4] == 1) ||
+				(nbDes[1] == 1 && nbDes[2] == 1 && nbDes[3] == 1 && nbDes[4] == 1 && nbDes[5] == 1)) {
+			return 40; //Grande suite
+		}
+		
 		if ((nbDes[0] >= 1 && nbDes[1] >= 1 && nbDes[2] >= 1 && nbDes[3] >= 1) ||
 				(nbDes[1] >= 1 && nbDes[2] >= 1 && nbDes[3] >= 1 && nbDes[4] >= 1) ||
 				(nbDes[2] >= 1 && nbDes[3] >= 1 && nbDes[4] >= 1 && nbDes[5] >= 1)) {
