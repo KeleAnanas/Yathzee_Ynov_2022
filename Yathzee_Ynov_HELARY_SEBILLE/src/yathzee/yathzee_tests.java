@@ -29,5 +29,19 @@ public class yathzee_tests {
 		assertEquals(24, yathzee.yathzee(serieDes4));
 		assertEquals(24, yathzee.yathzee(serieDes5));
 	}
+	
+	@Test
+	public void estFullHouse() {
+		int serieDes1[] = {1,1,1,5,5};
+		int serieDes2[] = {1,1,4,4,4};
+		int serieDes3[] = {5,4,5,4,5};
+		int serieDes4[] = {5,4,4,5,5};
+		int serieDes5[] = {5,5,4,4,5};
+		assertEquals(25, yathzee.yathzee(serieDes1));
+		assertEquals(25, yathzee.yathzee(serieDes2));
+		assertEquals(25, yathzee.yathzee(serieDes3));
+		assertEquals(25, yathzee.yathzee(serieDes4));
+		assertEquals(25, yathzee.yathzee(serieDes5));
+	}
 
 }
