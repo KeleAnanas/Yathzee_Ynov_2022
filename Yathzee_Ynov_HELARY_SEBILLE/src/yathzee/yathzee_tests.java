@@ -54,4 +54,11 @@ public class yathzee_tests {
 		assertEquals(30, yathzee.yathzee(serieDes3));
 	}
 
+	@Test
+	public void estGrandeSuite() {
+		int serieDes1[] = {1,2,3,4,5};
+		int serieDes2[] = {6,2,4,3,5};
+		assertEquals(40, yathzee.yathzee(serieDes1));
+		assertEquals(40, yathzee.yathzee(serieDes2));
+	}
 }
