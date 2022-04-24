@@ -3,7 +3,7 @@ package yathzee;
 public class yathzee {
 
 	public static void main(String[] args) {
-		yathzee(lancerDes(5));
+		combinaisonsYathzee(lancerDes(5));
 	}
 
 	private static int[] lancerDes(int nbDes) {
@@ -21,7 +21,7 @@ public class yathzee {
 		return random;
 	}
 
-	public static int yathzee(int[] des) {
+	public static int combinaisonsYathzee(int[] des) {
 		int nbPoints = 0;
 		int nbDes[] = { 0, 0, 0, 0, 0, 0 };
 
@@ -62,4 +62,6 @@ public class yathzee {
 
 		return nbPoints; // Brelan et Carré
 	}
+
+
 }
