@@ -23,11 +23,12 @@ public class yathzee {
 
 	public static int yathzee(int[] des) {
 		int nbPoints = 0;
-		int nbDes[] = { 0, 0, 0, 0, 0 };
+		int nbDes[] = { 0, 0, 0, 0, 0, 0 };
 
 		boolean paire = false;
 		boolean brelan = false;
-
+		
+		//calcul du jeu de dés
 		for (int i = 0; i < des.length; i++) {
 			nbDes[des[i] - 1]++;
 			nbPoints += des[i];
@@ -41,11 +42,16 @@ public class yathzee {
 				paire = true;
 			}
 		}
-
-		if (brelan && paire) {
-			return 25;
-		} else {
-			return nbPoints;
+		if (brelan && paire) { 
+			return 25; //Full House
 		}
+		
+		if ((nbDes[0] >= 1 && nbDes[1] >= 1 && nbDes[2] >= 1 && nbDes[3] >= 1) ||
+				(nbDes[1] >= 1 && nbDes[2] >= 1 && nbDes[3] >= 1 && nbDes[4] >= 1) ||
+				(nbDes[2] >= 1 && nbDes[3] >= 1 && nbDes[4] >= 1 && nbDes[5] >= 1)) {
+			return 30; //Petite suite
+		}
+		
+		return nbPoints; //Brelan et Carré
 	}
 }
