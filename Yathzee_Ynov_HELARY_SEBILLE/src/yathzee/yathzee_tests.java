@@ -16,6 +16,18 @@ public class yathzee_tests {
 		assertEquals(11, yathzee.yathzee(serieDes4));
 	}
 	
-	
+	@Test
+	public void estCarre() {
+		int serieDes1[] = {1,1,1,1,5};
+		int serieDes2[] = {1,4,4,4,4};
+		int serieDes3[] = {5,4,5,5,5};
+		int serieDes4[] = {5,5,4,5,5};
+		int serieDes5[] = {5,5,5,4,5};
+		assertEquals(9, yathzee.yathzee(serieDes1));
+		assertEquals(17, yathzee.yathzee(serieDes2));
+		assertEquals(24, yathzee.yathzee(serieDes3));
+		assertEquals(24, yathzee.yathzee(serieDes4));
+		assertEquals(24, yathzee.yathzee(serieDes5));
+	}
 
 }
