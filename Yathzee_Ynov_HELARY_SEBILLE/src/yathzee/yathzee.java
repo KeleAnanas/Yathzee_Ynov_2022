@@ -63,5 +63,15 @@ public class yathzee {
 		return nbPoints; // Brelan et Carré
 	}
 
+	public static int sommeXYathzee(int[] des, int x) {
+		int nbPoints = 0;
+
+		for (int i = 0; i < des.length; i++) {
+			if (des[i] == x) {
+				nbPoints += des[i];
+			}
+		}
+		return nbPoints;
+	}
 
 }
