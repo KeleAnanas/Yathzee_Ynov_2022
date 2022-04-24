@@ -27,13 +27,13 @@ public class yathzee {
 
 		boolean paire = false;
 		boolean brelan = false;
-		
-		//calcul du jeu de dés
+
+		// calcul du jeu de dés
 		for (int i = 0; i < des.length; i++) {
 			nbDes[des[i] - 1]++;
 			nbPoints += des[i];
 		}
-		
+
 		for (var i = 0; i < nbDes.length; i++) {
 			if (nbDes[i] == 3) {
 				brelan = true;
@@ -41,22 +41,25 @@ public class yathzee {
 			if (nbDes[i] == 2) {
 				paire = true;
 			}
+			if (nbDes[i] == 5) {
+				return 50; // Yathzee
+			}
 		}
-		if (brelan && paire) { 
-			return 25; //Full House
+		if (brelan && paire) {
+			return 25; // Full House
 		}
-		
-		if ((nbDes[0] == 1 && nbDes[1] == 1 && nbDes[2] == 1 && nbDes[3] == 1 && nbDes[4] == 1) ||
-				(nbDes[1] == 1 && nbDes[2] == 1 && nbDes[3] == 1 && nbDes[4] == 1 && nbDes[5] == 1)) {
-			return 40; //Grande suite
+
+		if ((nbDes[0] == 1 && nbDes[1] == 1 && nbDes[2] == 1 && nbDes[3] == 1 && nbDes[4] == 1)
+				|| (nbDes[1] == 1 && nbDes[2] == 1 && nbDes[3] == 1 && nbDes[4] == 1 && nbDes[5] == 1)) {
+			return 40; // Grande suite
 		}
-		
-		if ((nbDes[0] >= 1 && nbDes[1] >= 1 && nbDes[2] >= 1 && nbDes[3] >= 1) ||
-				(nbDes[1] >= 1 && nbDes[2] >= 1 && nbDes[3] >= 1 && nbDes[4] >= 1) ||
-				(nbDes[2] >= 1 && nbDes[3] >= 1 && nbDes[4] >= 1 && nbDes[5] >= 1)) {
-			return 30; //Petite suite
+
+		if ((nbDes[0] >= 1 && nbDes[1] >= 1 && nbDes[2] >= 1 && nbDes[3] >= 1)
+				|| (nbDes[1] >= 1 && nbDes[2] >= 1 && nbDes[3] >= 1 && nbDes[4] >= 1)
+				|| (nbDes[2] >= 1 && nbDes[3] >= 1 && nbDes[4] >= 1 && nbDes[5] >= 1)) {
+			return 30; // Petite suite
 		}
-		
-		return nbPoints; //Brelan et Carré
+
+		return nbPoints; // Brelan et Carré
 	}
 }
